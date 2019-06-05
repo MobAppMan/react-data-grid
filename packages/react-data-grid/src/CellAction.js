@@ -23,7 +23,7 @@ class CellAction extends React.Component {
 
   onGetMenuOptions = () => {
     return this.props.action.actions.map((action, index) => {
-      return <span key={index} onClick={action.callback}>{action.text}</span>;
+      return <span key={index} onClick={action.callback(this.props.column, this.props.row)}>{action.text}</span>;
     });
   }
 

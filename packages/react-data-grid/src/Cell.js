@@ -281,7 +281,7 @@ class Cell extends React.PureComponent {
       const cellActionButtons = cellMetaData.getCellActions(column, rowData);
       if (cellActionButtons && cellActionButtons.length) {
         return cellActionButtons.map((action, index) => {
-          return <CellAction key={index} action={action} isFirst={index === 0} />;
+          return <CellAction key={index} action={action} isFirst={index === 0} column={column} row={rowData} />;
         });
       }
       return null;
