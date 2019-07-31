@@ -39,7 +39,7 @@ class CellAction extends React.Component {
 
   onActionIconClick = () => {
     if (!this.isActionMenu()) {
-      this.props.action.callback();
+      this.props.action.callback(this.props.column, this.props.row);
     } else if (this.props.action.actions && this.props.action.actions.length) {
       this.onToggleMenu();
     }
